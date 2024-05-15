@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timer</title>
     
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-c9db6b34.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-2b44ac2e.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-21fdfc57.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-6154dde7.css">
   </head>
   <body>
     <a class="link-page" href="./index.html">Go home</a>
-    <!-- <script defer type="module" src="./js/1-timer.js"></script> -->
+
+    <div class="pick-date-box">
+      <input class="pick-date-input" type="text" id="datetime-picker" />
+      <button class="date-pick-btn" type="button" data-start>Start</button>
+    </div>
+
+    <div class="timer">
+      <div class="field">
+        <span class="value" data-days>00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="field">
+        <span class="value" data-hours>00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="field">
+        <span class="value" data-minutes>00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="field">
+        <span class="value" data-seconds>00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </body>
 </html>
