@@ -1,0 +1,69 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+
+fieldset {
+  display: flex;
+  gap: 48px;
+  padding: 14px 48px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+legend {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+fieldset > label {
+  float: left;
+  clear: none;
+  display: block;
+}
+
+input[type='radio'] {
+  float: left;
+  clear: none;
+  margin-right: 8px;
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+}
+
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #4e75ff;
+  border: none;
+}
+
+.delay-label {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.delay-input {
+  margin-top: 8px;
+  /* display: block; */
+  padding-left: 12px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 340px;
+  height: 40px;
+}
