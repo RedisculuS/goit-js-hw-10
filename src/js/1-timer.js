@@ -6,7 +6,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 let userSelectedDate;
 let countdownInterval;
-document.querySelector('[data-start]').disabled = true;
+let startBtn = document.querySelector('[data-start]');
+let inputDelay = document.querySelector('#datetime-picker');
+startBtn.disabled = true;
 
 const options = {
   enableTime: true,
@@ -24,24 +26,24 @@ const options = {
         messageColor: '#FFFFFF',
         titleColor: '#FFFFFF',
       });
-      document.querySelector('[data-start]').disabled = true;
+      startBtn.disabled = true;
     } else {
-      document.querySelector('[data-start]').disabled = false;
+      startBtn.disabled = false;
     }
   },
 };
 
 flatpickr('#datetime-picker', options);
 
-document.querySelector('[data-start]').addEventListener('click', function () {
+startBtn.addEventListener('click', function () {
   const countdownUpdate = () => {
     const now = new Date().getTime();
     const distance = userSelectedDate - now;
 
     if (distance <= 0) {
       clearInterval(countdownInterval);
-      document.querySelector('#datetime-picker').disabled = false;
-      document.querySelector('[data-start]').disabled = true;
+      inputDelay.disabled = false;
+      startBtn.disabled = true;
       return;
     }
 
@@ -61,8 +63,8 @@ document.querySelector('[data-start]').addEventListener('click', function () {
       .padStart(2, '0');
   };
 
-  document.querySelector('#datetime-picker').disabled = true;
-  document.querySelector('[data-start]').disabled = true;
+  inputDelay.disabled = true;
+  startBtn.disabled = true;
   countdownUpdate();
   countdownInterval = setInterval(countdownUpdate, 1000);
 });

@@ -11,15 +11,13 @@ form.addEventListener('submit', function (event) {
   const state = form.elements.state.value;
 
   const promise = new Promise((resolve, reject) => {
-    if (state === 'fulfilled') {
-      setTimeout(() => {
+    setTimeout(() => {
+      if (state === 'fulfilled') {
         resolve(delay);
-      }, delay);
-    } else {
-      setTimeout(() => {
+      } else {
         reject(delay);
-      }, delay);
-    }
+      }
+    }, delay);
   });
 
   promise
