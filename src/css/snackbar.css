@@ -20,7 +20,7 @@ legend {
   color: #2e2f42;
 }
 
-fieldset > label {
+.fieldset-label {
   float: left;
   clear: none;
   display: block;
@@ -36,7 +36,7 @@ input[type='radio'] {
   height: 20px;
 }
 
-button {
+.submit-btn {
   border-radius: 8px;
   padding: 8px 16px;
   width: 360px;
@@ -50,6 +50,10 @@ button {
   border: none;
 }
 
+.submit-btn:hover:active:focus {
+  background: #6c8cff;
+}
+
 .delay-label {
   margin-bottom: 16px;
   font-size: 16px;
@@ -60,7 +64,6 @@ button {
 
 .delay-input {
   margin-top: 8px;
-  /* display: block; */
   padding-left: 12px;
   border: 1px solid #808080;
   border-radius: 4px;

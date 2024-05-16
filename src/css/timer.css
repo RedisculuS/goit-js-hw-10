@@ -16,12 +16,34 @@ a {
 }
 
 .pick-date-input {
-  border-radius: 4px;
+  /* border-radius: 4px; */
   width: 272px;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
   color: #2e2f42;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  /* width: 272px; */
+  /* height: 40px; */
+}
+
+.pick-date-input:hover {
+  border: 1px solid #000;
+  /* border-radius: 4px; */
+  /* width: 272px; */
+  /* height: 40px; */
+}
+
+.pick-date-input:active {
+  border: 1px solid #4e75ff;
+}
+
+.pick-date-input:disabled {
+  color: #808080;
+  background: #fafafa;
+  border: 1px solid #808080;
 }
 
 .date-pick-btn {
@@ -33,6 +55,14 @@ a {
   line-height: 150%;
   letter-spacing: 0.04em;
   /* color: #989898; */
+}
+
+.date-pick-btn:hover:active:focus {
+  background: #6c8cff;
+}
+.date-pick-btn:disabled {
+  background: #cfcfcf;
+  color: #989898;
 }
 
 .timer {

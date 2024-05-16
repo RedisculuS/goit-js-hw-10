@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snackbar</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="iziToast.min.css" />
   </head>
   <body>
     <a class="link-page" href="./index.html">Go home</a>
@@ -16,19 +17,20 @@
 
       <fieldset>
         <legend>State</legend>
-        <label>
+        <label class="fieldset-label">
           <input type="radio" name="state" value="fulfilled" required />
           Fulfilled
         </label>
-        <label>
+        <label class="fieldset-label">
           <input type="radio" name="state" value="rejected" required />
           Rejected
         </label>
       </fieldset>
 
-      <button type="submit">Create notification</button>
+      <button class="submit-btn" type="submit">Create notification</button>
     </form>
 
-    <!-- <script defer type="module" src="./js/2-snackbar.js"></script> -->
+    <script defer type="module" src="./js/2-snackbar.js"></script>
+    <script src="iziToast.min.js" type="text/javascript"></script>
   </body>
 </html>
